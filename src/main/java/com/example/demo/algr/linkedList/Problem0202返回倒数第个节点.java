@@ -11,7 +11,6 @@ public class Problem0202返回倒数第个节点 {
         int i = kthToLast(listNode, 2);
         System.out.println(i);
 
-
     }
 
     public static int kthToLast(ListNode head, int k) {
