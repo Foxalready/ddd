@@ -1,15 +1,15 @@
 package com.example.demo.algr.linkedList;
 
 import com.example.demo.model.ListNode;
-import com.example.demo.utils.LinkedListUtil;
+import com.example.demo.utils.ListNodeUtil;
 
 public class Problem21合并两个有序链表 {
 
     public static void main(String[] args) {
-        ListNode listNode1 = LinkedListUtil.genListNode(1, 2, 4);
-        ListNode listNode2 = LinkedListUtil.genListNode(1, 3, 4);
+        ListNode listNode1 = ListNodeUtil.genListNode(1, 2, 4);
+        ListNode listNode2 = ListNodeUtil.genListNode(1, 3, 4);
         ListNode result = mergeTwoLists(listNode1, listNode2);
-        System.out.println(LinkedListUtil.printListNode(result));
+        ListNodeUtil.printListNode(result);
     }
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {

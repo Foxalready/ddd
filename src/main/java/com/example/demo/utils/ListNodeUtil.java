@@ -2,7 +2,7 @@ package com.example.demo.utils;
 
 import com.example.demo.model.ListNode;
 
-public class LinkedListUtil {
+public class ListNodeUtil {
 
     public static ListNode genListNode(Integer... value) {
         ListNode node = new ListNode(-1);
@@ -14,7 +14,7 @@ public class LinkedListUtil {
         return node.next;
     }
 
-    public static String printListNode(ListNode node) {
+    public static void printListNode(ListNode node) {
         if (node == null) {
             System.out.println("null");
         }
@@ -23,7 +23,7 @@ public class LinkedListUtil {
             sb.append(node.val).append("=>");
             node = node.next;
         }
-        return sb.append("null").toString();
+        System.out.println(sb.append("null").toString());
     }
 
 }
