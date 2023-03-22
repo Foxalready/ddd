@@ -13,21 +13,20 @@ public class Problem21合并两个有序链表 {
     }
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode result = new ListNode(-1);
-        ListNode current = result;
+        ListNode dummy = new ListNode(-1);
+        ListNode tmp = dummy;
         while (list1 != null && list2 != null) {
-
-            if (list1.val <= list2.val) {
-                current.next = list1;
+            if (list1.val < list2.val) {
+                tmp.next = list1;
                 list1 = list1.next;
             } else {
-                current.next = list2;
+                tmp.next = list2;
                 list2 = list2.next;
             }
-            current = current.next;
+            tmp = tmp.next;
         }
-        current.next = list1 == null ? list2 : list1;
-        return result.next;
+        tmp.next = list1 == null ? list2 : list1;
+        return dummy.next;
     }
 
 }

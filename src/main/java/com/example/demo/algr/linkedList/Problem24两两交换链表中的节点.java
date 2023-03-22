@@ -15,8 +15,8 @@ public class Problem24两两交换链表中的节点 {
     }
 
     public static ListNode swapPairs(ListNode head) {
-        ListNode pre = new ListNode(-1, head);
-        ListNode tmp = pre;
+        ListNode dummy = new ListNode(-1, head);
+        ListNode tmp = dummy;
         while (tmp.next != null && tmp.next.next != null) {
             ListNode start = tmp.next;
             ListNode end = tmp.next.next;
@@ -25,7 +25,7 @@ public class Problem24两两交换链表中的节点 {
             end.next = start;
             tmp = start;
         }
-        return pre.next;
+        return dummy.next;
     }
 
 }
